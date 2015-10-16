@@ -17,7 +17,7 @@ RUN DEBIAN_FRONTEND="noninteractive" apt-get install -y vim curl wget build-esse
 RUN add-apt-repository -y ppa:ondrej/php5
 RUN add-apt-repository -y ppa:nginx/stable
 RUN apt-get update
-RUN DEBIAN_FRONTEND="noninteractive" apt-get install -y --force-yes php5-cli php5-fpm php5-mysql php5-sqlite php5-curl php5-redis php5-memcache \
+RUN DEBIAN_FRONTEND="noninteractive" apt-get install -y --force-yes php5-cli php5-fpm php5-mysql php5-sqlite php5-curl php5-redis php5-memcached \
 		       php5-gd php5-mcrypt php5-intl php5-imap php5-tidy
 
 RUN sed -i "s/;date.timezone =.*/date.timezone = UTC/" /etc/php5/fpm/php.ini
