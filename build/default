@@ -12,6 +12,9 @@ server {
 
     charset utf-8;
 
+    //disable checking of client request body size
+    client_max_body_size 0
+    
     location / {
         try_files $uri /index.php?$query_string;
     }
